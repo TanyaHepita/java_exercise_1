@@ -4,12 +4,14 @@ import java.util.Scanner;
 public class Launcher {
     public static void main(String[] args) {
         System.out.println("Bienvenu");
-        Scanner scanner= new Scanner(System.in);
         System.out.println("quelque chose");
-        String rep = scanner.nextLine();
-        if (!rep.equals("quit")) {
+        Scanner scanner= new Scanner(System.in);
+        do {
+            String instruction = scanner.next();
+            if ("quit".equals(instruction))
+                break;
             System.out.println("Unknown command");
-        }
-
+        } while (true);        
     }
+
 }
